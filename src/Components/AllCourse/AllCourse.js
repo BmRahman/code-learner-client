@@ -9,7 +9,6 @@ import './AllCourse.css';
 
 const AllCourse = () => {
     const everyCourse = useLoaderData()
-    console.log(everyCourse)
     return (
         <div className=''>
             <Container>

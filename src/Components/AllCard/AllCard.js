@@ -18,7 +18,7 @@ const AllCard = ({allCourse}) => {
             {mentor}
             <div className='d-flex justify-content-between'>
                 <div className='rate'>
-                    <FaStar className='ic'></FaStar><FaStar className='ic'></FaStar><FaStar className='ic'></FaStar><FaStar className='ic'></FaStar><FaStarHalf className='ic'></FaStarHalf> {rating.number}
+                    <FaStar className=''></FaStar><FaStar className=''></FaStar><FaStar className=''></FaStar><FaStar className=''></FaStar><FaStarHalf className=''></FaStarHalf> {rating.number}
                 </div>
                 <div className='rate-text'>
                     {rating.badge}

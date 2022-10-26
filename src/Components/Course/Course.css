@@ -1,11 +1,13 @@
-.ic{
+.single{
+    width: 50%;
+    margin: 0 auto;
     background-color: black !important;
-    color: orange !important;
+    color: orange;
 }
 .view{
     background-color: darkslategrey !important;
     border: 1px solid darkslategrey !important;
-    color: orange !important;
+    color: orange;
 }
 .view:hover{
     background-color: transparent !important;
