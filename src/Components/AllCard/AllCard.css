@@ -2,12 +2,14 @@
     background-color: black !important;
     color: orange !important;
 }
-.view{
+.views {
     background-color: darkslategrey !important;
     border: 1px solid darkslategrey !important;
-    color: orange !important;
 }
-.view:hover{
+.views:hover{
     background-color: transparent !important;
     border: 1px solid orange !important;
+}
+.views a{
+    color: orange !important;
 }

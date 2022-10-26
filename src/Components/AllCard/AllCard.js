@@ -3,6 +3,7 @@ import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { FaStar, FaStarHalf } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 import './AllCard.css'
 
 const AllCard = ({allCourse}) => {
@@ -25,7 +26,7 @@ const AllCard = ({allCourse}) => {
                 </div>
             </div>
         </Card.Text>
-        <Button className='view'>View Details</Button>
+        <Button className='views'>  <Link to={`/course/${allCourse.id}`} className='text-decoration-none'>View Details</Link> </Button>
       </Card.Body>
     </Card>
             </Container>
