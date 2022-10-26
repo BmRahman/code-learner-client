@@ -18,7 +18,7 @@ const RightNav = () => {
                 courses.map(course => 
                  <p className='w-100 text-center c-name'>
                 
-                <Link className='text-decoration-none' to={`/courses/${course.id}`} key={course.id}> {course.name} </Link>
+                <Link className='text-decoration-none' to={`/course/${course.id}`} key={course.id}> {course.name} </Link>
                  
                  </p>
                 )

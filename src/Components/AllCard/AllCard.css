@@ -1,0 +1,13 @@
+.ic{
+    background-color: black;
+    color: orange;
+}
+.view{
+    background-color: darkslategrey;
+    border: 1px solid darkslategrey;
+    color: orange;
+}
+.view:hover{
+    background-color: transparent;
+    border: 1px solid orange;
+}
