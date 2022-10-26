@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
+import RightNav from '../RightNav/RightNav';
 
 const Header = () => {
     return (
@@ -23,6 +24,9 @@ const Header = () => {
               Dank memes
             </Nav.Link>
           </Nav>
+          <div className='d-lg-none'>
+            <RightNav></RightNav>
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>
