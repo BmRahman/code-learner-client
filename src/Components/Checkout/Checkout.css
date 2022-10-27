@@ -1,0 +1,18 @@
+.check{
+    height: 100vh;
+}
+.message{
+    width: 50%;
+    margin: 0 auto;
+    color: orange;
+}
+.message h5{
+    font-size: 20px;
+    line-height: 30px;
+}
+.message img{
+    height: 400px;
+}
+.thumb{
+    text-align: center;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import RightNav from '../RightNav/RightNav';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
@@ -36,7 +36,7 @@ const Course = () => {
                 </div>
             </div>
         </Card.Text>
-        <Button className='view'>Get Premium</Button>
+        <Button className='btn-checkout'> <Link className='text-decoration-none' to={`/checkout/${allDetails.id}`}>Get Premium</Link> </Button>
       </Card.Body>
     </Card>
                     </Col>
