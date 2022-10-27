@@ -2,14 +2,29 @@ import React, { useContext, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider';
+import {FcGoogle} from 'react-icons/fc'
+import {FaGithub} from 'react-icons/fa'
+import './Login.css';
 
 const Login = () => {
-    const {loginUser} = useContext(AuthContext)
+    const {loginUser, googleLogin} = useContext(AuthContext)
     const [error, setError] = useState('')
 
     const navigate = useNavigate()
+
+
+    const handleGoogle = () => {
+        googleLogin()
+        .then(result => {
+            const user = result.user
+            console.log(user)
+        })
+        .catch(error => {
+            console.error(error)
+        })
+    }
 
     const handleLogin = event => {
         event.preventDefault()
@@ -54,7 +69,13 @@ const Login = () => {
       <Button type="submit" className='btn-register'>
         Log In
       </Button>
+      <p className='my-3'>Or Login / Sign Up with</p>
+      <div>
+        <button className='bg-dark btn-google' onClick={handleGoogle}><FcGoogle className='bg-dark font-g'></FcGoogle></button>
+        <button className='bg-dark btn-git'><FaGithub className='bg-dark ms-2 font-g'></FaGithub></button>
+      </div>
       <p className='text-danger my-3 text-uppercase'>{error}</p>
+      <p>New to Code Learner? <Link to='/register'>Sign Up here now</Link></p>
     </Form>
             </Container>
         </div>

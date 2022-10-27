@@ -11,7 +11,7 @@ const Course = () => {
     const allDetails = useLoaderData()
     const {title, image_url, details, price, mentor, rating} = allDetails
     return (
-        <div>
+        <div className='bg-dark'>
             <Container>
                 <Row>
                     <Col lg='10'>

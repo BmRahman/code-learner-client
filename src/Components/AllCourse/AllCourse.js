@@ -10,7 +10,7 @@ import './AllCourse.css';
 const AllCourse = () => {
     const everyCourse = useLoaderData()
     return (
-        <div className=''>
+        <div className='all bg-dark'>
             <Container>
                 <Row>
                     <Col lg='10'>

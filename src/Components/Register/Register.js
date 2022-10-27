@@ -4,6 +4,7 @@ import './Register.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { AuthContext } from '../../Contexts/AuthProvider';
+import { Link } from 'react-router-dom';
 
 const Register = () => {
     const [passwordError, setPasswordError] = useState('')
@@ -78,6 +79,7 @@ const Register = () => {
         Sign Up
       </Button>
       <p className='text-danger my-3 text-uppercase'>{passwordError}</p>
+      <p>Already Have An Account? <Link to='/login'>Login Here</Link></p>
     </Form>
             </Container>
         </div>

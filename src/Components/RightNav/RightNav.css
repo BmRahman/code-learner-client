@@ -1,5 +1,14 @@
 .c-name{
-    border: 1px solid black;
+    border: 1px solid orange;
     border-radius: 20px;
     padding: 5px 0px;
+}
+.c-name a{
+    color: orange;
+}
+.c-name:hover{
+    border: 1px solid white;
+}
+.c-name a:hover{
+    color: white !important;
 }

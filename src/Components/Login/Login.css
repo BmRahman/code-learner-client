@@ -1,0 +1,13 @@
+.btn-google{
+    border: none;
+}
+.btn-git{
+    color: orange;
+    border: none;
+}
+.font-g{
+    font-size: 30px;
+}
+.btn-google:hover{
+    cursor: pointer;
+}
