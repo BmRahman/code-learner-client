@@ -1,0 +1,27 @@
+h2, a, p {
+    color: orange;
+
+}
+.reg-form{
+    color: orange;
+    border: 1px solid orange;
+    padding: 40px;
+    border-radius: 20px;
+    width: 50%;
+    margin: 0 auto;
+}
+.never{
+    color: orange;
+}
+.reg-main{
+    height: 100vh;
+}
+.btn-register{
+    color: orange !important;
+    background-color: black !important;
+    border: 1px solid black !important;
+}
+.btn-register:hover{
+    background-color: transparent !important;
+    border: 1px solid orange !important;
+}

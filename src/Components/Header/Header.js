@@ -13,7 +13,7 @@ const Header = () => {
 
     return (
         <div>
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark" className='header'>
+    <Navbar collapseOnSelect expand="lg" className='header'>
       <Container>
         <Navbar.Brand> <Link to='/home' className='text-decoration-none'>Code Learner</Link> </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -23,7 +23,7 @@ const Header = () => {
             <Nav.Link> <Link to='/courses' className='text-decoration-none'>All Courses</Link> </Nav.Link>
             <Nav.Link> <Link to='/blog' className='text-decoration-none'>Blog</Link> </Nav.Link>
             <Nav.Link> <Link to='/login' className='text-decoration-none'>Login</Link> </Nav.Link>
-            <Nav.Link> <Link to='/register' className='text-decoration-none'>Register</Link> </Nav.Link>
+            <Nav.Link> <Link to='/register' className='text-decoration-none'>Sign Up</Link> </Nav.Link>
           </Nav>
           <Nav>
             <Nav.Link>
