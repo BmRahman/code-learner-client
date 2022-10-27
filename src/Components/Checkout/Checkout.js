@@ -9,7 +9,7 @@ const Checkout = () => {
     const {title, price, mentor, image_url} = checkoutData; 
     return (
         <div className='bg-dark check'>
-            <Header></Header>
+            {/* <Header></Header> */}
             
             <Container>
             <h2 className='text-center py-5'>Congratulations! You are now a premium user!</h2>
