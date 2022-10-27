@@ -11,7 +11,7 @@ const Offer = () => {
                 <h2 className='text-center'>What We Offer</h2>
 
                 <Row>
-                    <Col lg='3' sm='1'>
+                    <Col lg='3' md='1' sm='1'>
                         <div className='box-1 text-center my-5'>
                         <FaChalkboardTeacher className='box-ic mb-3'></FaChalkboardTeacher>
                         <h5 className='box-heading mb-3'>Certified Teachers</h5>
@@ -19,7 +19,7 @@ const Offer = () => {
                         </div>
                     </Col>
 
-                    <Col lg='3' sm='1'>
+                    <Col lg='3' md='1' sm='1'>
                         <div className='box-2 text-center my-5'>
                         <FcReading className='box-ic mb-3'></FcReading>
                         <h5 className='box-heading mb-3'>Special Education</h5>
@@ -27,7 +27,7 @@ const Offer = () => {
                         </div>
                     </Col>
 
-                    <Col lg='3' sm='1'>
+                    <Col lg='3' md='1' sm='1'>
                         <div className='box-1 text-center my-5'>
                         <FaBook className='box-ic mb-3'></FaBook>
                         <h5 className='box-heading mb-3'>Quality Courses</h5>
@@ -35,7 +35,7 @@ const Offer = () => {
                         </div>
                     </Col>
 
-                    <Col lg='3' sm='1'>
+                    <Col lg='3' md='1' sm='1'>
                         <div className='box-2 text-center my-5'>
                         <FaMoneyCheckAlt className='box-ic-alt mb-3'></FaMoneyCheckAlt>
                         <h5 className='box-heading mb-3'>Value For Money</h5>

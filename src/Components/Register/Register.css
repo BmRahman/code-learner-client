@@ -25,3 +25,30 @@ h2, a, p {
     background-color: transparent !important;
     border: 1px solid orange !important;
 }
+
+@media (min-width: 320px) and (max-width: 480px){
+    .reg-form{
+        width: 95%;
+    }
+    .reg-main{
+        height: 100%;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px){
+    .reg-form{
+        width: 95%;
+    }
+    .reg-main{
+        height: 100vh;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .reg-form{
+        width: 95%;
+    }
+    .reg-main{
+        height: 100vh;
+    }
+}

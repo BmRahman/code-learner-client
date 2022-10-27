@@ -18,3 +18,19 @@
     color: orange;
 } */
 
+@media (min-width: 320px) and (max-width: 480px){
+    .single{
+        width: 95%;
+    }
+}
+@media (min-width: 481px) and (max-width: 767px){
+    .single{
+        width: 95%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .single{
+        width: 85%;
+    }
+}

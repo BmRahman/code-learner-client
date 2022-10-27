@@ -57,7 +57,7 @@ const Header = () => {
               
             </Nav.Link>
           </Nav>
-          <div className='d-lg-none'>
+          <div className='d-none'>
             <RightNav></RightNav>
           </div>
         </Navbar.Collapse>

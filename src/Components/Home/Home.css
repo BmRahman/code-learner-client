@@ -12,3 +12,47 @@
     line-height: 30px;
     
 }
+
+@media (min-width: 320px) and (max-width: 480px){
+    .home-main{
+        background-color: #212529;
+        height: 100%;
+    }
+    .ban-text{
+        padding-top: 30px;
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .home-main{
+        background-color: #212529;
+        height: 100%;
+    }
+    .ban-text{
+        padding-top: 30px;
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .box-1 p{
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .box-2 p{
+        font-size: 18px;
+        line-height: 28px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .home-main{
+        background-color: #212529;
+        height: 100%;
+    }
+    .ban-text{
+        padding-top: 30px;
+        font-size: 20px;
+        line-height: 30px;
+    }
+}

@@ -88,9 +88,7 @@ const Register = () => {
         <Form.Control type="password" name='confirm' placeholder="Password" required/>
       </Form.Group>
 
-      <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-      </Form.Group>
+      
       <Button type="submit" className='btn-register'>
         Sign Up
       </Button>

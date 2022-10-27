@@ -16,3 +16,33 @@
 .thumb{
     text-align: center;
 }
+
+@media (min-width: 320px) and (max-width: 480px){
+    .check{
+        height: 100%;
+    }
+    .message{
+        width: 90%;
+    }
+    .message img{
+        height: auto;
+    }
+}
+@media (min-width: 481px) and (max-width: 767px){
+    .message{
+        width: 90%;
+    }
+    .message img{
+        height: auto;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    .message{
+        width: 90%;
+    }
+    .message img{
+        height: auto;
+    }
+}

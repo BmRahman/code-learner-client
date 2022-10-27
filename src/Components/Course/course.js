@@ -41,7 +41,7 @@ const Course = () => {
     </Card>
                     </Col>
 
-                    <Col lg='2'>
+                    <Col lg='2' className='d-none d-lg-block'>
                         <RightNav></RightNav>
                     </Col>
                 </Row>
