@@ -4,17 +4,19 @@ import './Register.css';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { AuthContext } from '../../Contexts/AuthProvider';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Register = () => {
     const [passwordError, setPasswordError] = useState('')
 
-
-    const {createUser} = useContext(AuthContext)
+    const navigate = useNavigate()
+    const {createUser, updateUser} = useContext(AuthContext)
 
     const handleRegister = event => {
         event.preventDefault()
         const form = event.target;
+        const name = form.name.value;
+        const photoURL = form.url.value;
         const email = form.email.value;
         const password = form.password.value;
         const confirm = form.confirm.value;
@@ -26,6 +28,8 @@ const Register = () => {
                 const user = result.user;
                 console.log(user)
                 form.reset()
+                navigate('/')
+                handleUpdateUser(name, photoURL)
             })
             .catch(error => {
                 console.error(error)
@@ -34,6 +38,18 @@ const Register = () => {
         else{
             setPasswordError('your password did not matched')
         }
+    }
+
+    const handleUpdateUser = (name, photoURL) => {
+      const profile = {
+        displayName: name,
+        photoURL: photoURL
+      }
+      updateUser(profile)
+      .then(() => {})
+      .catch(error => {
+        console.error(error)
+      })
     }
 
     return (

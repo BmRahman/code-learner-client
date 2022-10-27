@@ -42,7 +42,7 @@ const Header = () => {
           <Nav>
             <Nav.Link>
             {
-              user?.email || user?.displayName
+              user?.displayName
             }
             </Nav.Link>
             <Nav.Link>
