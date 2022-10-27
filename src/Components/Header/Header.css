@@ -1,3 +1,9 @@
+.header{
+    background-color: black;
+}
 .header a{
     color: orange;
+}
+.header a:hover{
+    color: crimson;
 }
