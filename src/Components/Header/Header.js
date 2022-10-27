@@ -9,7 +9,15 @@ import { AuthContext } from './../../Contexts/AuthProvider';
 
 const Header = () => {
 
-    const {user} = useContext(AuthContext)
+    const {user, userLogout} = useContext(AuthContext)
+
+    const handleLogout = () => {
+      userLogout()
+      .then(() => {})
+      .catch(error => {
+      console.error(error)
+    })
+    }
 
     return (
         <div>
@@ -22,17 +30,24 @@ const Header = () => {
             <Nav.Link> <Link to='/home' className='text-decoration-none'>Home</Link> </Nav.Link>
             <Nav.Link> <Link to='/courses' className='text-decoration-none'>All Courses</Link> </Nav.Link>
             <Nav.Link> <Link to='/blog' className='text-decoration-none'>Blog</Link> </Nav.Link>
-            <Nav.Link> <Link to='/login' className='text-decoration-none'>Login</Link> </Nav.Link>
-            <Nav.Link> <Link to='/register' className='text-decoration-none'>Sign Up</Link> </Nav.Link>
+            {
+              user?.email ? <Nav.Link onClick={handleLogout}> <Link className='text-decoration-none'>Log Out</Link> </Nav.Link> :
+              <>
+              <Nav.Link> <Link to='/login' className='text-decoration-none'>Login</Link> </Nav.Link>
+              <Nav.Link> <Link to='/register' className='text-decoration-none'>Sign Up</Link> </Nav.Link>
+              </>
+            }
           </Nav>
           <Nav>
             <Nav.Link>
             {
-              user?.displayName
+              user?.email
             }
             </Nav.Link>
-            <Nav.Link eventKey={2} href="#memes">
-              Dank memes
+            <Nav.Link>
+              {
+                user?.photoURL
+              }
             </Nav.Link>
           </Nav>
           <div className='d-lg-none'>
