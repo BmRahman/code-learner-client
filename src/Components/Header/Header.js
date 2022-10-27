@@ -7,6 +7,8 @@ import RightNav from '../RightNav/RightNav';
 import './Header.css';
 import { AuthContext } from './../../Contexts/AuthProvider';
 import { Image } from 'react-bootstrap';
+import Tippy from '@tippyjs/react';
+import 'tippy.js/dist/tippy.css';
 
 const Header = () => {
 
@@ -46,9 +48,13 @@ const Header = () => {
             }
             </Nav.Link>
             <Nav.Link>
-              {
-                user?.photoURL && <Image roundedCircle src={user.photoURL} style={{width:'40px'}} />
-              }
+              
+                <Tippy content={user?.displayName}>
+                  {
+                    user?.photoURL && <Image roundedCircle src={user.photoURL} style={{width:'40px'}} />
+                  }
+                </Tippy>
+              
             </Nav.Link>
           </Nav>
           <div className='d-lg-none'>
