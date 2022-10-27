@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import RightNav from '../RightNav/RightNav';
 import './Header.css';
 import { AuthContext } from './../../Contexts/AuthProvider';
+import { Image } from 'react-bootstrap';
 
 const Header = () => {
 
@@ -31,7 +32,7 @@ const Header = () => {
             <Nav.Link> <Link to='/courses' className='text-decoration-none'>All Courses</Link> </Nav.Link>
             <Nav.Link> <Link to='/blog' className='text-decoration-none'>Blog</Link> </Nav.Link>
             {
-              user?.email ? <Nav.Link onClick={handleLogout}> <Link className='text-decoration-none'>Log Out</Link> </Nav.Link> :
+              user?.email || user?.displayName ? <Nav.Link onClick={handleLogout}> <Link className='text-decoration-none'>Log Out</Link> </Nav.Link> :
               <>
               <Nav.Link> <Link to='/login' className='text-decoration-none'>Login</Link> </Nav.Link>
               <Nav.Link> <Link to='/register' className='text-decoration-none'>Sign Up</Link> </Nav.Link>
@@ -41,12 +42,12 @@ const Header = () => {
           <Nav>
             <Nav.Link>
             {
-              user?.email
+              user?.email || user?.displayName
             }
             </Nav.Link>
             <Nav.Link>
               {
-                user?.photoURL
+                user?.photoURL && <Image roundedCircle src={user.photoURL} style={{width:'40px'}} />
               }
             </Nav.Link>
           </Nav>

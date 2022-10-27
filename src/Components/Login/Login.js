@@ -9,7 +9,7 @@ import {FaGithub} from 'react-icons/fa'
 import './Login.css';
 
 const Login = () => {
-    const {loginUser, googleLogin} = useContext(AuthContext)
+    const {loginUser, googleLogin, githubLogin} = useContext(AuthContext)
     const [error, setError] = useState('')
     const location = useLocation()
     const from = location.state?.from?.pathname || '/'
@@ -26,6 +26,17 @@ const Login = () => {
         .catch(error => {
             console.error(error)
         })
+    }
+
+    const handleGithub = () => {
+      githubLogin()
+      .then(result => {
+        const user = result.user
+        console.log(user)
+    })
+    .catch(error => {
+        console.error(error)
+    })
     }
 
     const handleLogin = event => {
@@ -74,7 +85,7 @@ const Login = () => {
       <p className='my-3'>Or Login / Sign Up with</p>
       <div>
         <button className='bg-dark btn-google' onClick={handleGoogle}><FcGoogle className='bg-dark font-g'></FcGoogle></button>
-        <button className='bg-dark btn-git'><FaGithub className='bg-dark ms-2 font-g'></FaGithub></button>
+        <button className='bg-dark btn-git' onClick={handleGithub}><FaGithub className='bg-dark ms-2 font-g'></FaGithub></button>
       </div>
       <p className='text-danger my-3 text-uppercase'>{error}</p>
       <p>New to Code Learner? <Link to='/register'>Sign Up here now</Link></p>
