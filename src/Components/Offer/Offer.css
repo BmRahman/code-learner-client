@@ -1,0 +1,25 @@
+.box-ic{
+    color: orange;
+    font-size: 30px;
+}
+.box-ic-alt{
+    color: cornflowerblue;
+    font-size: 30px;
+}
+.box-heading{
+    color: orange;
+}
+.box-1{
+    padding: 15px;
+    border: 1px solid orange;
+}
+.box-2{
+    padding: 15px;
+    border: 1px solid cornflowerblue;
+}
+.box-2 p{
+    color: cornflowerblue;
+}
+.box-2 h5{
+    color: cornflowerblue;
+}
