@@ -8,6 +8,7 @@ import Register from "../Components/Register/Register";
 import Checkout from "../Components/Checkout/Checkout";
 import PrivateRoute from "./PrivateRoute";
 import Blog from "../Components/Blog/Blog";
+import Error from "../Components/Error/Error";
 
 
 
@@ -53,5 +54,10 @@ export const routes = createBrowserRouter([
                 element: <Register></Register>
             }
         ]
+        
+    },
+    {
+        path: '*',
+        element: <Error></Error>
     }
 ])
