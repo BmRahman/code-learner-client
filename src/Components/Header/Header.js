@@ -19,7 +19,7 @@ const Header = () => {
 
     const modeHandler = () => {
       let newText = text;
-      newText === 'dark' ? setText('light') : setText('dark')
+      newText === 'Dark' ? setText('Light') : setText('Dark')
     }
 
     const handleLogout = () => {

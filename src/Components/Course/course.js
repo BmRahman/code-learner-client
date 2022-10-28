@@ -7,6 +7,8 @@ import Card from 'react-bootstrap/Card';
 import { FaStar, FaStarHalf } from 'react-icons/fa';
 import './Course.css';
 
+
+
 const Course = () => {
     const allDetails = useLoaderData()
     const {title, image_url, details, price, mentor, rating} = allDetails
@@ -16,7 +18,12 @@ const Course = () => {
                 <Row>
                     <Col lg='10'>
                     <h2 className='text-center my-5'>About Our {title} Course</h2>
-
+                    <p className='text-center'>Get Course Outline</p>
+                    <div className='down text-center py-3'>
+                        <a href='file.pdf' download='file.pdf' className='btn-down'>
+                            Download
+                        </a>
+                    </div>
     <Card className='single mb-5'>
       <Card.Img variant="top" className='single-im' src={image_url}/>
       <Card.Body>

@@ -11,6 +11,13 @@
 .btn-checkout a:hover{
     color: cornflowerblue;
 }
+.btn-down{
+    text-decoration: none;
+    padding: 8px 20px;
+    border: 1px solid orange;
+    border-radius: 20px;
+    color: orange;
+}
 /* .view a{
     width: 100%;
     background-color: darkslategrey !important;
