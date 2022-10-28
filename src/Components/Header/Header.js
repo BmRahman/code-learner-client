@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -9,10 +9,18 @@ import { AuthContext } from './../../Contexts/AuthProvider';
 import { Image } from 'react-bootstrap';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
+import Button from 'react-bootstrap/Button';
 
 const Header = () => {
 
     const {user, userLogout} = useContext(AuthContext)
+
+    const [text, setText] = useState('Dark')
+
+    const modeHandler = () => {
+      let newText = text;
+      newText === 'dark' ? setText('light') : setText('dark')
+    }
 
     const handleLogout = () => {
       userLogout()
@@ -33,13 +41,16 @@ const Header = () => {
             <Nav.Link> <Link to='/home' className='text-decoration-none'>Home</Link> </Nav.Link>
             <Nav.Link> <Link to='/courses' className='text-decoration-none'>All Courses</Link> </Nav.Link>
             <Nav.Link> <Link to='/blog' className='text-decoration-none'>Blog</Link> </Nav.Link>
+
             {
-              user?.email || user?.displayName ? <Nav.Link onClick={handleLogout}> <Link className='text-decoration-none'>Log Out</Link> </Nav.Link> :
+              user?.email || user?.displayName ? <Nav.Link onClick={handleLogout}><Link className='text-decoration-none'>Log Out</Link> </Nav.Link> :
               <>
               <Nav.Link> <Link to='/login' className='text-decoration-none'>Login</Link> </Nav.Link>
               <Nav.Link> <Link to='/register' className='text-decoration-none'>Sign Up</Link> </Nav.Link>
               </>
             }
+
+            <Button variant="outline-warning" className='mode' onClick={modeHandler}>{text}</Button>
           </Nav>
           <Nav>
             <Nav.Link>
