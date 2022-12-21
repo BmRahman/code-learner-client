@@ -6,7 +6,7 @@ const RightNav = () => {
     const [courses, setCourses] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/all-courses')
+        fetch('https://code-lerner-server.vercel.app/all-courses')
         .then(res => res.json())
         .then(data => setCourses(data))
     }, [])

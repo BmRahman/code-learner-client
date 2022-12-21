@@ -4,6 +4,8 @@ import './Home.css';
 import banner from '../../Assets/banner.png';
 import Image from 'react-bootstrap/Image'
 import Offer from '../Offer/Offer';
+import Transform from './Transform/Transform';
+import Contact from './Contact/Contact';
 
 const Home = () => {
     return (
@@ -21,8 +23,10 @@ const Home = () => {
                 </Col>
             </Row>   
 
-            <Offer></Offer>
             </Container>
+            <Offer></Offer>
+            <Transform></Transform>
+            <Contact></Contact>
         </div>
     );
 };

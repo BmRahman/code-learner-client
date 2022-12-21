@@ -6,7 +6,7 @@ import './Offer.css'
 
 const Offer = () => {
     return (
-        <div>
+        <div className='bg-dark'>
             <Container>
                 <h2 className='text-center'>What We Offer</h2>
 
@@ -15,7 +15,7 @@ const Offer = () => {
                         <div className='box-1 text-center my-5'>
                         <FaChalkboardTeacher className='box-ic mb-3'></FaChalkboardTeacher>
                         <h5 className='box-heading mb-3'>Certified Teachers</h5>
-                        <p>We have over 5000 certified instructors. There are many coding courses from top instructors who teach you programming by building real-world applications. </p>
+                        <p>We have certified instructors. There are many courses from top instructors who teach you programming by building real-world applications. </p>
                         </div>
                     </Col>
 
@@ -31,7 +31,7 @@ const Offer = () => {
                         <div className='box-1 text-center my-5'>
                         <FaBook className='box-ic mb-3'></FaBook>
                         <h5 className='box-heading mb-3'>Quality Courses</h5>
-                        <p>2 million students, 5,000 instructors, and 100+ courses. You can choose from our  courses by category, instructor popularity, user ratings & reviews </p>
+                        <p>2 million students, 5,000 instructors, and 100+ courses. You can choose from our  courses by category, instructor popularity, user ratings. </p>
                         </div>
                     </Col>
 

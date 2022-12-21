@@ -29,7 +29,7 @@ export const routes = createBrowserRouter([
             {
                 path: 'courses',
                 element: <AllCourse></AllCourse>,
-                loader: () => fetch('http://localhost:5000/all-course')
+                loader: () => fetch('https://code-lerner-server.vercel.app/all-course')
             },
             {
                 path: 'blog',
@@ -38,12 +38,12 @@ export const routes = createBrowserRouter([
             {
                 path: '/course/:id',
                 element: <Course></Course>,
-                loader: ({params}) => fetch(`http://localhost:5000/course/${params.id}`)
+                loader: ({params}) => fetch(`https://code-lerner-server.vercel.app/course/${params.id}`)
             },
             {
                 path: '/checkout/:id',
                 element: <PrivateRoute><Checkout></Checkout></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/course/${params.id}`)
+                loader: ({params}) => fetch(`https://code-lerner-server.vercel.app/course/${params.id}`)
             },
             {
                 path: 'login',

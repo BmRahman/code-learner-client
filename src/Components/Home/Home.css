@@ -1,6 +1,6 @@
-.home-main{
+/* .home-main{
     height: 100vh;
-}
+} */
 .welcome{
     color: cornflowerblue;
 }
@@ -16,7 +16,6 @@
 @media (min-width: 320px) and (max-width: 480px){
     .home-main{
         background-color: #212529;
-        height: 100%;
     }
     .ban-text{
         padding-top: 30px;
@@ -28,7 +27,6 @@
 @media (min-width: 481px) and (max-width: 767px) {
     .home-main{
         background-color: #212529;
-        height: 100%;
     }
     .ban-text{
         padding-top: 30px;
