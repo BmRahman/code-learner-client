@@ -50,7 +50,7 @@ const Header = () => {
               </>
             }
 
-            <Button variant="outline-warning" className='mode' onClick={modeHandler}>{text}</Button>
+            {/* <Button variant="outline-warning" className='mode' onClick={modeHandler}>{text}</Button> */}
           </Nav>
           <Nav>
             <Nav.Link>
